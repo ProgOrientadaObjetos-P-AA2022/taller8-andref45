@@ -42,4 +42,20 @@ public class DocenteNombramiento extends Docente {
     public double obtenerSueldo() {
         return sueldo;
     }
+    @Override
+    public String toString() {
+        String reporte = String.format("Nombre del docente: %s\n"
+                + "Cédula: %s\n"
+                + "Valor sueldo: %.2f\n"
+                + "Valor por horas extra: %.2f\n"
+                + "Horas extra: %d\n"
+                + "Sueldo: %.2f\n",
+                obtenerNombreDocente(),
+                obtenerCedulaDocente(),
+                obtenerValorSueldo(),
+                obtenerV_horasExtra(),
+                obtenerNumeroHoras(),
+                obtenerSueldo());
+        return reporte;
+    }
 }
